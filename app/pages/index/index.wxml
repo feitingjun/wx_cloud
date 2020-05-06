@@ -1,0 +1,3 @@
+<view class="container">
+  <button wx:if="{{ !userInfo || !userInfo.wxInfo }}" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">用户授权</button>
+</view>
