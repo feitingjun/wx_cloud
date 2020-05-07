@@ -1,3 +1,28 @@
-<view class="container">
-  <button wx:if="{{ !userInfo || !userInfo.wxInfo }}" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">用户授权</button>
+<view wx:if="{{ weather.now1 }}" class="location" style="padding-right: {{ right }}px; height: {{ statusBarHeight + 44 }}px; padding-top: {{ statusBarHeight }}px">
+  <view>
+    <image src="/images/location.png" mode="widthFix"></image>
+    <text>{{ district }}</text>
+  </view>
+  <view>{{ foo.handleTime(weather.update.loc) }} 更新</view>
 </view>
+<scroll-view bindscroll="bindscroll" scroll-y class="container">
+  <!-- <button wx:if="{{ !userInfo || !userInfo.wxInfo }}" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">用户授权</button> -->
+  <image wx:if="{{ weather.now1 }}" class="bg" src="{{ cloud_img }}/images/{{ weather.now1.wea_img }}.png" mode="widthFix"></image>
+  <view wx:if="{{ weather.now1 }}" class="content" style="-webkit-clip-path: polygon(0 {{ scrollTop }}px, 100% {{ scrollTop }}px, 100% 100%, 0 100%);">
+    <view class="weather-box">
+      <view class="tem">{{ weather.now1.tem }}°</view>
+      <view class="weather">
+        <image src="/images/100.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<wxs module="foo">
+  var handleTime = function(str){
+    var index = str.indexOf(' ');
+    return str.substring(index + 1);
+  }
+  module.exports = {
+    handleTime: handleTime
+  }
+</wxs>

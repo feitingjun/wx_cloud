@@ -17,6 +17,8 @@ App({
         getUserInfo();
       }
     }
-    this.globalData = {}
+  },
+  globalData: {
+    cloud_img: 'cloud://development-y2j06.6465-development-y2j06-1302002779'
   }
 })

@@ -2,12 +2,25 @@
 	"miniprogramRoot": "app/",
 	"cloudfunctionRoot": "clound/",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
+		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
-		"enhance": true
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"appid": "wxfa99ff66e9609acb",
 	"projectname": "%E4%B8%80%E6%B1%9F%E6%98%8E%E6%9C%88_%E4%BA%91%E5%BC%80%E5%8F%91",

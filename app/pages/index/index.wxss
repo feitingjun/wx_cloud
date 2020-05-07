@@ -1,0 +1,58 @@
+.location{
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+}
+.location>view:first-of-type{
+  display: flex;
+  align-items: center;
+}
+.location>view:first-of-type image{
+  width: 40rpx;
+  margin-right: 10rpx;
+}
+.location>view:first-of-type text{
+  font-size: 36rpx;
+}
+.location>view:last-of-type{
+  font-size: 26rpx;
+}.container{
+  position: relative;
+}
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 3;
+}
+.bg{
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.content{
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding-top: 200rpx;
+}
+.tem{
+  font-size: 160rpx;
+  /* margin-top: 150rpx; */
+  padding-left: 30rpx;
+}
+.weather image{
+  width: 50rpx;
+}

@@ -15,6 +15,21 @@ export const getUserInfo = async (wxInfo) => {
   }
 }
 
+export const getWeather = async (lat, lng) => {
+  const data = await wx.cloud.callFunction({
+    name: NAME,
+    data: {
+      $url: 'weather',
+      lat,
+      lng
+    }
+  })
+  if(data.errMsg === 'cloud.callFunction:ok'){
+    return data.result;
+  }
+  return null;
+}
+
 // export const updateUserInfo = async (userInfo) => {
 //   const data = await wx.cloud.callFunction({
 //     name: NAME,
